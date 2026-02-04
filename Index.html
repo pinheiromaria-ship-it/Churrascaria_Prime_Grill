@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Prime Grill</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Splash -->
+<div id="splash">
+    <img src="logo.png" class="logo-large">
+    <h1>PRIME GRILL</h1>
+    <p class="slogan">A Verdadeira Churrascaria De ANGICOS – Cortes Nobres Na Brasa!</p>
+    <button class="btn" onclick="startApp()">ENTRAR NO CARDÁPIO</button>
+</div>
+
+<!-- Conteúdo Principal -->
+<div id="main-content">
+
+<header>
+    <img src="logo.png" class="logo">
+    <h1>PRIME GRILL CHURRASCARIA</h1>
+</header>
+
+<!-- CARNES -->
+<section class="menu-section">
+    <h2>Carnes</h2>
+    <div class="menu-grid">
+
+        <div class="menu-item">
+            <img src="Carne de sol.jpg">
+            <h3>Carne de Sol</h3>
+            <p>R$ 45,00</p>
+            <div class="quantity-controls">
+                <button onclick="decreaseQuantity('Carne de Sol', 45)">-</button>
+                <span class="quantity" id="qty-Carne de Sol">0</span>
+                <button onclick="increaseQuantity('Carne de Sol', 45)">+</button>
+            </div>
+            <button class="btn-add" onclick="addToCart('Carne de Sol', 45)">Adicionar</button>
+        </div>
+
+        <div class="menu-item">
+            <img src="Contra file.jpg">
+            <h3>Contra-filé</h3>
+            <p>R$ 49,99</p>
+            <div class="quantity-controls">
+                <button onclick="decreaseQuantity('Contra-filé', 49.99)">-</button>
+                <span class="quantity" id="qty-Contra-filé">0</span>
+                <button onclick="increaseQuantity('Contra-filé', 49.99)">+</button>
+            </div>
+            <button class="btn-add" onclick="addToCart('Contra-filé', 49.99)">Adicionar</button>
+        </div>
+
+        <div class="menu-item">
+            <img src="Picanha premium.jpg">
+            <h3>Picanha Premium</h3>
+            <p>R$ 69,99</p>
+            <div class="quantity-controls">
+                <button onclick="decreaseQuantity('Picanha Premium', 69.99)">-</button>
+                <span class="quantity" id="qty-Picanha Premium">0</span>
+                <button onclick="increaseQuantity('Picanha Premium', 69.99)">+</button>
+            </div>
+            <button class="btn-add" onclick="addToCart('Picanha Premium', 69.99)">Adicionar</button>
+        </div>
+
+        <div class="menu-item">
+            <img src="Linguiça.jpg">
+            <h3>Linguiça</h3>
+            <p>R$ 28,00</p>
+            <div class="quantity-controls">
+                <button onclick="decreaseQuantity('Linguiça', 28)">-</button>
+                <span class="quantity" id="qty-Linguiça">0</span>
+                <button onclick="increaseQuantity('Linguiça', 28)">+</button>
+            </div>
+            <button class="btn-add" onclick="addToCart('Linguiça', 28)">Adicionar</button>
+        </div>
+
+        <div class="menu-item">
+            <img src="Linguiça Toscana.jpg">
+            <h3>Linguiça Toscana</h3>
+            <p>R$ 30,00</p>
+            <div class="quantity-controls">
+                <button onclick="decreaseQuantity('Linguiça Toscana', 30)">-</button>
+                <span class="quantity" id="qty-Linguiça Toscana">0</span>
+                <button onclick="increaseQuantity('Linguiça Toscana', 30)">+</button>
+            </div>
+            <button class="btn-add" onclick="addToCart('Linguiça Toscana', 30)">Adicionar</button>
+        </div>
+
+    </div>
+</section>
+
+<!-- ACOMPANHAMENTOS -->
+<section class="menu-section">
+    <h2>Acompanhamentos</h2>
+    <div class="menu-grid">
+
+        <div class="menu-item">
+            <img src="Arroz.jpg">
+            <h3>Arroz</h3>
+            <p>R$ 21,00</p>
+            <div class="quantity-controls">
+                <button onclick="decreaseQuantity('Arroz', 21)">-</button>
+                <span class="quantity" id="qty-Arroz">0</span>
+                <button onclick="increaseQuantity('Arroz', 21)">+</button>
+            </div>
+            <button class="btn-add" onclick="addToCart('Arroz', 21)">Adicionar</button>
+        </div>
+
+        <div class="menu-item">
+            <img src="Feijão Tropeiro.jpg">
+            <h3>Feijão Tropeiro</h3>
+            <p>R$ 12,00</p>
+            <div class="quantity-controls">
+                <button onclick="decreaseQuantity('Feijão Tropeiro', 12)">-</button>
+                <span class="quantity" id="qty-Feijão Tropeiro">0</span>
+                <button onclick="increaseQuantity('Feijão Tropeiro', 12)">+</button>
+            </div>
+            <button class="btn-add" onclick="addToCart('Feijão Tropeiro', 12)">Adicionar</button>
+        </div>
+
+        <div class="menu-item">
+            <img src="Farofa da casa.jpg">
+            <h3>Farofa da Casa</h3>
+            <p>R$ 8,00</p>
+            <div class="quantity-controls">
+                <button onclick="decreaseQuantity('Farofa da Casa', 8)">-</button>
+                <span class="quantity" id="qty-Farofa da Casa">0</span>
+                <button onclick="increaseQuantity('Farofa da Casa', 8)">+</button>
+            </div>
+            <button class="btn-add" onclick="addToCart('Farofa da Casa', 8)">Adicionar</button>
+        </div>
+
+        <div class="menu-item">
+            <img src="Vinagrete.jpg">
+            <h3>Vinagrete</h3>
+            <p>R$ 6,00</p>
+            <div class="quantity-controls">
+                <button onclick="decreaseQuantity('Vinagrete', 6)">-</button>
+                <span class="quantity" id="qty-Vinagrete">0</span>
+                <button onclick="increaseQuantity('Vinagrete', 6)">+</button>
+            </div>
+            <button class="btn-add" onclick="addToCart('Vinagrete', 6)">Adicionar</button>
+        </div>
+
+    </div>
+</section>
+
+<!-- SALADAS -->
+<section class="menu-section">
+    <h2>Saladas</h2>
+    <div class="menu-grid">
+
+        <div class="menu-item">
+            <img src="Salada Simples.jpg">
+            <h3>Salada Simples</h3>
+            <p>R$ 10,00</p>
+            <div class="quantity-controls">
+                <button onclick="decreaseQuantity('Salada Simples', 10)">-</button>
+                <span class="quantity" id="qty-Salada Simples">0</span>
+                <button onclick="increaseQuantity('Salada Simples', 10)">+</button>
+            </div>
+            <button class="btn-add" onclick="addToCart('Salada Simples', 10)">Adicionar</button>
+        </div>
+
+        <div class="menu-item">
+            <img src="Salada Completa.jpg">
+            <h3>Salada Completa</h3>
+            <p>R$ 15,00</p>
+            <div class="quantity-controls">
+                <button onclick="decreaseQuantity('Salada Completa', 15)">-</button>
+                <span class="quantity" id="qty-Salada Completa">0</span>
+                <button onclick="increaseQuantity('Salada Completa', 15)">+</button>
+            </div>
+            <button class="btn-add" onclick="addToCart('Salada Completa', 15)">Adicionar</button>
+        </div>
+
+        <div class="menu-item">
+            <img src="Salada Verde Com Molho Especial.jpg">
+            <h3>Salada Verde com Molho Especial</h3>
+            <p>R$ 14,00</p>
+            <div class="quantity-controls">
+                <button onclick="decreaseQuantity('Salada Verde', 14)">-</button>
+                <span class="quantity" id="qty-Salada Verde">0</span>
+                <button onclick="increaseQuantity('Salada Verde', 14)">+</button>
+            </div>
+            <button class="btn-add" onclick="addToCart('Salada Verde', 14)">Adicionar</button>
+        </div>
+
+    </div>
+</section>
+
+<!-- BEBIDAS -->
+<section class="menu-section">
+    <h2>Bebidas</h2>
+    <div class="menu-grid">
+
+        <div class="menu-item">
+            <img src="Refrigerante lata.jpg">
+            <h3>Refrigerante (lata)</h3>
+            <p>R$ 6,00</p>
+            <div class="quantity-controls">
+                <button onclick="decreaseQuantity('Refrigerante (lata)', 6)">-</button>
+                <span class="quantity" id="qty-Refrigerante (lata)">0</span>
+                <button onclick="increaseQuantity('Refrigerante (lata)', 6)">+</button>
+            </div>
+            <button class="btn-add" onclick="addToCart('Refrigerante (lata)', 6)">Adicionar</button>
+        </div>
+
+        <div class="menu-item">
+            <img src="Refrigerante 1L.jpg">
+            <h3>Refrigerante (1L)</h3>
+            <p>R$ 10,00</p>
+            <div class="quantity-controls">
+                <button onclick="decreaseQuantity('Refrigerante (1L)', 10)">-</button>
+                <span class="quantity" id="qty-Refrigerante (1L)">0</span>
+                <button onclick="increaseQuantity('Refrigerante (1L)', 10)">+</button>
+            </div>
+            <button class="btn-add" onclick="addToCart('Refrigerante (1L)', 10)">Adicionar</button>
+        </div>
+
+        <div class="menu-item">
+            <img src="Sucos Naturais.jpg">
+            <h3>Sucos Naturais</h3>
+            <p>R$ 8,00</p>
+            <div class="quantity-controls">
+                <button onclick="decreaseQuantity('Sucos Naturais', 8)">-</button>
+                <span class="quantity" id="qty-Sucos Naturais">0</span>
+                <button onclick="increaseQuantity('Sucos Naturais', 8)">+</button>
+            </div>
+            <button class="btn-add" onclick="addToCart('Sucos Naturais', 8)">Adicionar</button>
+        </div>
+
+        <div class="menu-item">
+            <img src="Água Mineral.jpg">
+            <h3>Água Mineral</h3>
+            <p>R$ 4,00</p>
+            <div class="quantity-controls">
+                <button onclick="decreaseQuantity('Água Mineral', 4)">-</button>
+                <span class="quantity" id="qty-Água Mineral">0</span>
+                <button onclick="increaseQuantity('Água Mineral', 4)">+</button>
+            </div>
+            <button class="btn-add" onclick="addToCart('Água Mineral', 4)">Adicionar</button>
+        </div>
+
+    </div>
+</section>
+
+<!-- SOBREMESAS -->
+<section class="menu-section">
+    <h2>Sobremesas</h2>
+    <div class="menu-grid">
+
+        <div class="menu-item">
+            <img src="Pudim de Leite.jpg">
+            <h3>Pudim de Leite</h3>
+            <p>R$ 10,00</p>
+            <div class="quantity-controls">
+                <button onclick="decreaseQuantity('Pudim de Leite', 10)">-</button>
+                <span class="quantity" id="qty-Pudim de Leite">0</span>
+                <button onclick="increaseQuantity('Pudim de Leite', 10)">+</button>
+            </div>
+            <button class="btn-add" onclick="addToCart('Pudim de Leite', 10)">Adicionar</button>
+        </div>
+
+        <div class="menu-item">
+            <img src="Mousse de Maracujá.jpg">
+            <h3>Mousse de Maracujá</h3>
+            <p>R$ 9,00</p>
+            <div class="quantity-controls">
+                <button onclick="decreaseQuantity('Mousse de Maracujá', 9)">-</button>
+                <span class="quantity" id="qty-Mousse de Maracujá">0</span>
+                <button onclick="increaseQuantity('Mousse de Maracujá', 9)">+</button>
+            </div>
+            <button class="btn-add" onclick="addToCart('Mousse de Maracujá', 9)">Adicionar</button>
+        </div>
+
+    </div>
+</section>
+
+<!-- SORVETES -->
+<section class="menu-section">
+    <h2>Sorvetes</h2>
+    <div class="menu-grid">
+
+        <div class="menu-item">
+            <img src="Sorvete de morango.jpg">
+            <h3>Sorvete de Morango</h3>
+            <p>R$ 8,00</p>
+            <div class="quantity-controls">
+                <button onclick="decreaseQuantity('Sorvete de Morango', 8)">-</button>
+                <span class="quantity" id="qty-Sorvete de Morango">0</span>
+                <button onclick="increaseQuantity('Sorvete de Morango', 8)">+</button>
+            </div>
+            <button class="btn-add" onclick="addToCart('Sorvete de Morango', 8)">Adicionar</button>
+        </div>
+
+        <div class="menu-item">
+            <img src="Sorvete de chocolate.jpg">
+            <h3>Sorvete de Chocolate</h3>
+            <p>R$ 8,00</p>
+            <div class="quantity-controls">
+                <button onclick="decreaseQuantity('Sorvete de Chocolate', 8)">-</button>
+                <span class="quantity" id="qty-Sorvete de Chocolate">0</span>
+                <button onclick="increaseQuantity('Sorvete de Chocolate', 8)">+</button>
+            </div>
+            <button class="btn-add" onclick="addToCart('Sorvete de Chocolate', 8)">Adicionar</button>
+        </div>
+
+        <div class="menu-item">
+            <img src="Sorvete de maracujá.jpg">
+            <h3>Sorvete de Maracujá</h3>
+            <p>R$ 8,00</p>
+            <div class="quantity-controls">
+                <button onclick="decreaseQuantity('Sorvete de Maracujá', 8)">-</button>
+                <span class="quantity" id="qty-Sorvete de Maracujá">0</span>
+                <button onclick="increaseQuantity('Sorvete de Maracujá', 8)">+</button>
+            </div>
+            <button class="btn-add" onclick="addToCart('Sorvete de Maracujá', 8)">Adicionar</button>
+        </div>
+
+        <div class="menu-item">
+            <img src="Sorvete de Baunilha.jpg">
+            <h3>Sorvete de Baunilha</h3>
+            <p>R$ 8,00</p>
+            <div class="quantity-controls">
+                <button onclick="decreaseQuantity('Sorvete de Baunilha', 8)">-</button>
+                <span class="quantity" id="qty-Sorvete de Baunilha">0</span>
+                <button onclick="increaseQuantity('Sorvete de Baunilha', 8)">+</button>
+            </div>
+            <button class="btn-add" onclick="addToCart('Sorvete de Baunilha', 8)">Adicionar</button>
+        </div>
+
+        <div class="menu-item">
+            <img src="Sorvete de pistache">
+            <h3>Sorvete de pistache</h3>
+            <p>R$ 9,00</p>
+            <div class="quantity-controls">
+                <button onclick="decreaseQuantity('Sorvete de pistache', 9)">-</button>
+                <span class="quantity" id="qty-Sorvete de pistache">0</span>
+                <button onclick="increaseQuantity('Sorvete de pistache', 9)">+</button>
+            </div>
+            <button class="btn-add" onclick="addToCart('Sorvete de pistache', 9)">Adicionar</button>
+        </div>
+
+        <div class="menu-item">
+            <img src="Sorvete de Flocos.jpg">
+            <h3>Sorvete de Flocos</h3>
+            <p>R$ 9,00</p>
+            <div class="quantity-controls">
+                <button onclick="decreaseQuantity('Sorvete de Flocos', 9)">-</button>
+                <span class="quantity" id="qty-Sorvete de Flocos">0</span>
+                <button onclick="increaseQuantity('Sorvete de Flocos', 9)">+</button>
+            </div>
+            <button class="btn-add" onclick="addToCart('Sorvete de Flocos', 9)">Adicionar</button>
+        </div>
+
+        <div class="menu-item">
+            <img src="Sorvete de Manga.jpg">
+            <h3>Sorvete de Manga</h3>
+            <p>R$ 9,00</p>
+            <div class="quantity-controls">
+                <button onclick="decreaseQuantity('Sorvete de Manga', 9)">-</button>
+                <span class="quantity" id="qty-Sorvete de Manga">0</span>
+                <button onclick="increaseQuantity('Sorvete de Manga', 9)">+</button>
+            </div>
+            <button class="btn-add" onclick="addToCart('Sorvete de Manga', 9)">Adicionar</button>
+        </div>
+
+    </div>
+</section>
+
+<!-- CARRINHO E CHECKOUT -->
+<section class="cart-section">
+    <h2>🛒 Seu Pedido</h2>
+    <ul id="cart-items"></ul>
+    <p class="total">Total: R$ <span id="total">0,00</span></p>
+
+    <div class="checkout-section">
+        <label>Endereço para entrega:</label>
+        <input type="text" id="address" placeholder="Rua, número, bairro, cidade">
+
+        <label>Forma de pagamento:</label>
+        <select id="payment">
+            <option value="PIX">PIX</option>
+            <option value="Cartão de Débito">Cartão de Débito</option>
+            <option value="Cartão de Crédito">Cartão de Crédito</option>
+        </select>
+
+        <label>Cupom de desconto:</label>
+        <input type="text" id="coupon" placeholder="Digite seu cupom">
+    </div>
+
+    <button class="btn btn-finalize" onclick="finalizeOrder()">FINALIZAR</button>
+</section>
+
+<footer>
+    © 2026 Prime Grill • Angicos, RN
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
